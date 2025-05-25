@@ -35,8 +35,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
+}
+@media (min-width: 900px) {
+  body {
+    flex-direction: row;
+  }
 }
 
 * {

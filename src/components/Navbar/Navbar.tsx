@@ -5,7 +5,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <div className={styles.navbar}>
-      <Image src="/logo.png" alt="company logo" width={38} height={38} />
+      <Image src="/logo.svg" alt="company logo" width={38} height={38} />
       <div className={styles.links}>
         <div className={`${styles.home} flex-c`}>
           <Image src="/home.svg" alt="home logo" width={24} height={24} />
