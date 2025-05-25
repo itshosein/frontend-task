@@ -1,0 +1,20 @@
+.navbar {
+  background-color: var(--box-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 41px;
+  gap: 108px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 48px;
+}
+
+.home p {
+  color: var(--green);
+}
