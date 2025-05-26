@@ -14,7 +14,7 @@
   gap: 48px;
 }
 
-.home p {
+.active {
   color: var(--green);
 }
 
