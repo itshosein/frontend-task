@@ -1,0 +1,32 @@
+.container {
+  width: 50%;
+  height: 100%;
+  border: 1px solid var(--border);
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 18px;
+}
+
+.title {
+  color: var(--green);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.number {
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.desc {
+  margin-top: 4px;
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.underline {
+  text-decoration: underline;
+}

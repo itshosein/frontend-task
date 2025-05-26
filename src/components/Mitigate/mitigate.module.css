@@ -50,14 +50,7 @@
   height: 186px;
   gap: 0;
 }
-.leftInner {
-  width: 50%;
-  height: 100%;
-  border: 1px solid var(--border);
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px 18px;
-}
+
 .rightInner {
   width: 50%;
   height: 100%;
@@ -67,21 +60,7 @@
   align-items: flex-start;
   padding: 20px 18px;
 }
-.rightInnerTitle {
-  color: var(--green);
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: capitalize;
-  text-align: left;
-}
-.rightInnerNumber {
-  font-weight: 500;
-  font-size: 50px;
-}
 
-.rightInnerDesc {
-  margin-top: 4px;
-  color: var(--gray);
-  font-weight: 400;
-  font-size: 22px;
-}
+
+
+

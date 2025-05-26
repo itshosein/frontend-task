@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./mitigate.module.css";
 import RaiseSVG from "../svgs/raise/Raise";
+import MitigateItem from "../mitigate-item/MitigateItem";
 
 interface CountData {
   count: number;
@@ -45,9 +46,9 @@ const Mitigate = async () => {
 
   const mitigatedAttacksCount: CountData =
     await resMitigatedAttacksCount?.json();
+
   const droppedPacketsCount: DroppedPacketsData =
     await resDroppedPacketsCount?.json();
-
   const droppedBytesCount: DroppedPacketsData =
     await resDroppedBytesCount?.json();
 
@@ -68,30 +69,8 @@ const Mitigate = async () => {
           Cumulative Sum of Mitigated DDoS Attacks
         </p>
         <div className={`flex-r ${styles.rightInnerBoxContainer}`}>
-          <div className={`flex-c ${styles.leftInner}`}>
-            <p className={styles.rightInnerTitle}>Billion Packets</p>
-            <p className={styles.rightInnerNumber}>
-              {(droppedPacketsCount
-                ? droppedPacketsCount.sum / 1_000_000_000
-                : 0
-              ).toFixed(2)}
-            </p>
-            <p className={styles.rightInnerDesc}>
-              Total Number of Dropped Packets
-            </p>
-          </div>
-          <div className={`flex-c ${styles.rightInner}`}>
-            <p className={styles.rightInnerTitle}>Peta Bytes</p>
-            <p className={styles.rightInnerNumber}>
-              {(droppedBytesCount
-                ? droppedBytesCount.sum / 1024 ** 5
-                : 0
-              ).toFixed(2)}
-            </p>
-            <p className={styles.rightInnerDesc}>
-              Total Number of Dropped Packets
-            </p>
-          </div>
+          <MitigateItem type="packets" count={droppedPacketsCount.sum} />
+          <MitigateItem type="bytes" count={droppedBytesCount.sum} />
         </div>
       </div>
     </div>
