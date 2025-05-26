@@ -11,39 +11,52 @@ interface DroppedPacketsData {
 }
 
 const Mitigate = async () => {
-  const resMitigatedAttacksCount = await fetch(
-    "https://api-ddos.tic.ir/api/count-chart",
-    {
-      cache: "no-store",
-    }
-  );
-  const resDroppedPacketsCount = await fetch(
-    "https://api-ddos.tic.ir/api/sum-pps",
-    {
-      cache: "no-store",
-    }
-  );
+  let resMitigatedAttacksCount = null;
+  let resDroppedPacketsCount = null;
+  let resDroppedBytesCount = null;
+  try {
+    resMitigatedAttacksCount = await fetch(
+      "https://api-ddos.tic.ir/api/count-chart",
+      {
+        cache: "no-store",
+      }
+    );
+  } catch (error) {
+    console.log("error", error);
+  }
 
-  const resDroppedBytesCount = await fetch(
-    "https://api-ddos.tic.ir/api/sum-lrl",
-    {
+  try {
+    resDroppedPacketsCount = await fetch(
+      "https://api-ddos.tic.ir/api/sum-pps",
+      {
+        cache: "no-store",
+      }
+    );
+  } catch (error) {
+    console.log("error", error);
+  }
+  try {
+    resDroppedBytesCount = await fetch("https://api-ddos.tic.ir/api/sum-lrl", {
       cache: "no-store",
-    }
-  );
+    });
+  } catch (error) {
+    console.log("error", error);
+  }
+
   const mitigatedAttacksCount: CountData =
-    await resMitigatedAttacksCount.json();
+    await resMitigatedAttacksCount?.json();
   const droppedPacketsCount: DroppedPacketsData =
-    await resDroppedPacketsCount.json();
+    await resDroppedPacketsCount?.json();
 
   const droppedBytesCount: DroppedPacketsData =
-    await resDroppedBytesCount.json();
+    await resDroppedBytesCount?.json();
 
   return (
     <div className={`flex-r ${styles.mitigate}`}>
       <div className={`flex-c ${styles.leftContainer}`}>
         <RaiseSVG color="white" height={68} width={68} />
         <p className={styles.mitigatedAttacksCount}>
-          {mitigatedAttacksCount.count}
+          {mitigatedAttacksCount ? mitigatedAttacksCount.count : 0}
         </p>
         <p className={styles.mitigatedAttacksDesc}>
           Number Of <span>Mitigated</span> Attacks
@@ -58,7 +71,10 @@ const Mitigate = async () => {
           <div className={`flex-c ${styles.leftInner}`}>
             <p className={styles.rightInnerTitle}>Billion Packets</p>
             <p className={styles.rightInnerNumber}>
-              {(droppedPacketsCount.sum / 1_000_000_000).toFixed(2)}
+              {(droppedPacketsCount
+                ? droppedPacketsCount.sum / 1_000_000_000
+                : 0
+              ).toFixed(2)}
             </p>
             <p className={styles.rightInnerDesc}>
               Total Number of Dropped Packets
@@ -67,7 +83,10 @@ const Mitigate = async () => {
           <div className={`flex-c ${styles.rightInner}`}>
             <p className={styles.rightInnerTitle}>Peta Bytes</p>
             <p className={styles.rightInnerNumber}>
-              {(droppedBytesCount.sum / 1024 ** 5).toFixed(2)}
+              {(droppedBytesCount
+                ? droppedBytesCount.sum / 1024 ** 5
+                : 0
+              ).toFixed(2)}
             </p>
             <p className={styles.rightInnerDesc}>
               Total Number of Dropped Packets
