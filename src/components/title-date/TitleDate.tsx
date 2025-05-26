@@ -1,8 +1,12 @@
+"use client";
+import { useEffect, useState } from "react";
 import styles from "./title-date.module.css";
 import CalendarSVG from "../svgs/calendar/Calendar";
 import ClockSVG from "../svgs/clock/Clock";
 
 const TitleDate = () => {
+  const [time, setTime] = useState("");
+
   const convertToPersianDate = (date: Date) => {
     const persianDate = new Intl.DateTimeFormat("fa-IR", {
       year: "numeric",
@@ -31,7 +35,15 @@ const TitleDate = () => {
 
   const persianDate = convertToPersianDate(currentDate);
 
-  const time: string = getCurrentTime(currentDate);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentDateTmp = new Date();
+
+      const timeTmp: string = getCurrentTime(currentDateTmp);
+      setTime(timeTmp);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div>
