@@ -1,5 +1,6 @@
-import Image from "next/image";
 import styles from "./title-date.module.css";
+import CalendarSVG from "../svgs/calendar/Calendar";
+import ClockSVG from "../svgs/clock/Clock";
 
 const TitleDate = () => {
   const convertToPersianDate = (date: Date) => {
@@ -38,19 +39,14 @@ const TitleDate = () => {
         <p className={styles.title}>TIC DDoS Radar</p>
         <div className={`flex-r ${styles.dateTimeBox}`}>
           <div className={`flex-r ${styles.dateBox}`}>
-            <Image
-              src="/calendar.png"
-              alt="calendar logo"
-              width={24}
-              height={24}
-            />
+            <CalendarSVG height={24} width={24} color="list-gray" />
             <p className={styles.date}>
               {dayOfWeek} - {persianDate}
             </p>
           </div>
 
           <div className={`flex-r ${styles.dateBox}`}>
-            <Image src="/clock.png" alt="clock logo" width={24} height={24} />
+            <ClockSVG height={24} width={24} color="list-gray" />
             <p className={styles.date}>{time}</p>
           </div>
         </div>
