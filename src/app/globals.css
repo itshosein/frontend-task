@@ -71,7 +71,7 @@ a {
 
 @media (max-width: 900px) {
   .main {
-    height: 100%;
+    height: calc(100vh + 550px);
     overflow-y: auto;
   }
 }

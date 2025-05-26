@@ -4,33 +4,54 @@
   background-color: var(--box-background);
   border: 1px solid var(--border);
   padding: 32px;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
-  z-index: 4;
+  z-index: 100;
+  gap: 36px;
+}
+
+.timersHolder {
+  gap: 24px;
+  margin-right: 60px;
+}
+
+.timeItem {
+  gap: 6px;
+}
+
+.timerContainer {
+  width: 48px;
+  height: 48px;
+  background-color: var(--dark-gray);
+  border-radius: 6px;
+}
+
+.time {
+  font-weight: 600;
+  font-size: 24px;
+}
+.timerDesc {
+  font-weight: 14px;
+  font-size: 12px;
+}
+
+.descHolder {
+  gap: 6px;
+  align-items: flex-start;
+}
+.topDesc {
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--green);
+}
+
+.bottomDesc {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 @media (max-width: 1600px) {
   .attackDuration {
     width: 100%;
   }
-}
-
-.durationSVGContainer {
-  width: 200px;
-  height: 104px;
-  position: relative;
-}
-
-.durationSVGContainer svg {
-  position: relative;
-  z-index: 2;
-}
-.grayBack {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 37px;
-  background-color: var(--dark-gray);
 }
