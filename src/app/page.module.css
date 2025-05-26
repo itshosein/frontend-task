@@ -12,10 +12,14 @@
 
 .secondRow {
   width: 100%;
-  height: 440px;
+  height: 100%;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 16px;
+}
+
+.timeSelector {
+  border: 1px solid var(--border);
 }
 
 @media (max-width: 1600px) {

@@ -5,6 +5,51 @@
   border: 1px solid var(--border);
   padding: 32px;
 }
+
+.titleRow {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.titleRight {
+  gap: 10px;
+  padding: 5px 16px;
+}
+
+.timeSelector {
+  border: 1px solid var(--border);
+  padding: 6px 16px;
+  border-radius: 6px;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+.timeTrail {
+  width: 69px;
+  height: 28px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0px;
+  background-color: var(--border);
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.time {
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+
 @media (max-width: 1600px) {
   .flowChart {
     width: 100%;
