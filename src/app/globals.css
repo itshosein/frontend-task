@@ -62,6 +62,12 @@ a {
   padding: 32px;
 }
 
+@media (max-width: 900px) {
+  .main {
+    height: 100%;
+  }
+}
+
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
