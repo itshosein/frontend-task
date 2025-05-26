@@ -5,7 +5,7 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import HomeSVG from "../svgs/Home/Home";
-import MapSVG from "../svgs/map/Map";
+import MapSVG from "../svgs/Map/Map";
 
 const Navbar = () => {
   const pathname = usePathname();

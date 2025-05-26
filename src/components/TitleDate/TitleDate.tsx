@@ -59,8 +59,8 @@ const TitleDate = () => {
         The Radar report has been extracted from the data of the
         <span className={styles.companyName}>SIWAN</span> DDoS detection and
         Mitigation system, which has been deployed and operated by the TIC
-        company as the country's defense shield, providing effective protection
-        against attacks.
+        company as the country&apos;s defense shield, providing effective
+        protection against attacks.
       </p>
     </div>
   );

@@ -1,1 +1,9 @@
+.home {
+  margin-top: 10px;
+  gap: 16px;
+}
 
+.firstRow {
+  width: 100%;
+  justify-content: flex-start;
+}
