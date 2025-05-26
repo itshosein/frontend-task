@@ -36,6 +36,7 @@
 
 .rightContainer {
   width: 70%;
+  height: 310px;
   gap: 29px;
   justify-content: flex-start;
   border: 1px solid var(--border);
@@ -89,6 +90,6 @@
     height: 100%;
   }
   .rightContainer {
-    height: 150%;
+    height: 100%;
   }
 }
