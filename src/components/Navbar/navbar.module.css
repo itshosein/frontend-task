@@ -1,4 +1,5 @@
 .navbar {
+  min-width: 120px;
   background-color: var(--box-background);
   display: flex;
   flex-direction: row;
