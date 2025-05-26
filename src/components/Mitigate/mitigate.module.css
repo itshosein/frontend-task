@@ -1,0 +1,27 @@
+.mitigate {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.leftContainer {
+  min-width: 45%;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--box-background);
+  padding: 32px;
+}
+
+.mitigatedAttacksCount {
+  color: var(--green);
+  font-weight: 500;
+  font-size: 50px;
+}
+.mitigatedAttacksDesc {
+  font-weight: 400;
+  font-size: 22px;
+}
+.mitigatedAttacksDesc span {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+  padding: 0 8px;
+}
