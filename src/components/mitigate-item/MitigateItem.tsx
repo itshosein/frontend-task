@@ -13,10 +13,7 @@ const MitigateItem: React.FC<MitigateItemProps> = (props) => {
   const [formatted, measurement] = formatCount(count, type);
 
   return (
-    <div
-      className={`flex-c ${styles.container}`}
-      style={type === "bytes" ? { borderLeft: "none" } : {}}
-    >
+    <div className={`flex-c ${styles.container}`}>
       <p className={styles.title}>{measurement}</p>
       <p className={styles.number}>{formatted}</p>
       <p className={styles.desc}>

@@ -4,9 +4,14 @@
   justify-content: flex-start;
   gap: 0;
 }
+@media (max-width: 1600px) {
+  .mitigate {
+    width: 100%;
+  }
+}
 
 .leftContainer {
-  min-width: 276px;
+  width: 30%;
   height: 100%;
   gap: 16px;
   border: 1px solid var(--border);
@@ -30,8 +35,7 @@
 }
 
 .rightContainer {
-  min-width: 55%;
-  height: 100%;
+  width: 70%;
   gap: 29px;
   justify-content: flex-start;
   border: 1px solid var(--border);
@@ -47,8 +51,12 @@
 
 .rightInnerBoxContainer {
   width: 100%;
+  min-width: 460px;
   height: 186px;
   gap: 0;
+}
+.rightInnerBoxContainer div:last-child {
+  border-left: none;
 }
 
 .rightInner {
@@ -61,6 +69,26 @@
   padding: 20px 18px;
 }
 
-
-
-
+@media (max-width: 900px) {
+  .mitigate,
+  .rightInnerBoxContainer {
+    flex-direction: column;
+  }
+  .leftContainer,
+  .rightContainer {
+    width: 100%;
+  }
+  .rightContainer,
+  .rightInner,
+  .rightInnerBoxContainer div:last-child {
+    border-left: 1px solid var(--border);
+  }
+  .rightInnerBoxContainer {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+  .rightContainer {
+    height: 150%;
+  }
+}

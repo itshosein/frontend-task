@@ -1,0 +1,36 @@
+.attackDuration {
+  width: 50%;
+  height: 104px;
+  background-color: var(--box-background);
+  border: 1px solid var(--border);
+  padding: 32px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 4;
+}
+
+@media (max-width: 1600px) {
+  .attackDuration {
+    width: 100%;
+  }
+}
+
+.durationSVGContainer {
+  width: 200px;
+  height: 104px;
+  position: relative;
+}
+
+.durationSVGContainer svg {
+  position: relative;
+  z-index: 2;
+}
+.grayBack {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 37px;
+  background-color: var(--dark-gray);
+}

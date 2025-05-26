@@ -5,8 +5,15 @@
   gap: 0;
 }
 
+@media (max-width: 1600px) {
+  .attackVolumes {
+    width: 100%;
+  }
+}
+
 .leftContainer {
   width: 50%;
+  min-width: 405px;
   height: 100%;
   border: 1px solid var(--border);
   justify-content: flex-start;
@@ -16,9 +23,23 @@
 }
 .rightContainer {
   width: 50%;
+  min-width: 405px;
   height: 100%;
   border: 1px solid var(--border);
   border-left: none;
   padding: 32px 18px 35px;
   gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .attackVolumes {
+    flex-direction: column;
+  }
+  .leftContainer,
+  .rightContainer {
+    width: 100%;
+  }
+  .rightContainer {
+    border-left: 1px solid var(--border);
+  }
 }

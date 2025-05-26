@@ -1,0 +1,12 @@
+.flowChart {
+  width: 50%;
+  height: 100%;
+  background-color: var(--box-background);
+  border: 1px solid var(--border);
+  padding: 32px;
+}
+@media (max-width: 1600px) {
+  .flowChart {
+    width: 100%;
+  }
+}
