@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./mitigate.module.css";
-import RaiseSVG from "../svgs/Raise/Raise";
+import RaiseSVG from "../svgs/raise/Raise";
 
 interface CountData {
   count: number;

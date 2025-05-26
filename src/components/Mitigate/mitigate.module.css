@@ -31,12 +31,12 @@
 
 .rightContainer {
   min-width: 55%;
+  height: 100%;
   gap: 29px;
   justify-content: flex-start;
   border: 1px solid var(--border);
   background-color: var(--box-background);
   padding: 32px;
-  max-height: 100%;
   border-left: none;
 }
 

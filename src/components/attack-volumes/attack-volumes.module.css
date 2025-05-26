@@ -1,0 +1,24 @@
+.attackVolumes {
+  width: 50%;
+  height: 100%;
+  background-color: var(--box-background);
+  gap: 0;
+}
+
+.leftContainer {
+  width: 50%;
+  height: 100%;
+  border: 1px solid var(--border);
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 32px 18px 35px;
+  gap: 18px;
+}
+.rightContainer {
+  width: 50%;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-left: none;
+  padding: 32px 18px 35px;
+  gap: 18px;
+}

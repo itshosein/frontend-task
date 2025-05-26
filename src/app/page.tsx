@@ -1,6 +1,7 @@
-import Mitigate from "@/components/Mitigate/Mitigate";
-import TitleDate from "@/components/TitleDate/TitleDate";
+import Mitigate from "@/components/mitigate/Mitigate";
+import TitleDate from "@/components/title-date/TitleDate";
 import styles from "./page.module.css";
+import AttackVolumes from "@/components/attack-volumes/AttackVolumes";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <TitleDate />
       <div className={`flex-r ${styles.firstRow}`}>
         <Mitigate />
+        <AttackVolumes />
       </div>
     </div>
   );
