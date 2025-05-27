@@ -20,15 +20,15 @@ const FlowChart = () => {
             <p className={styles.time} onClick={() => setTrailPosition(0)}>
               1 day
             </p>
-            <p className={styles.time} onClick={() => setTrailPosition(70)}>
+            <p className={styles.time} onClick={() => setTrailPosition(34)}>
               1 week
             </p>
-            <p className={styles.time} onClick={() => setTrailPosition(144)}>
+            <p className={styles.time} onClick={() => setTrailPosition(68)}>
               1 hour
             </p>
             <div
               className={styles.timeTrail}
-              style={{ left: `${trailPosition}px` }}
+              style={{ left: `${trailPosition}%` }}
             />
           </div>
           <div

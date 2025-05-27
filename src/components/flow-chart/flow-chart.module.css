@@ -98,3 +98,19 @@
     width: 100%;
   }
 }
+
+@media (max-width: 900px) {
+  .timeSelector {
+    gap: 8px;
+  }
+  .titleRow {
+    flex-direction: column;
+  }
+  .titleRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .timeTrail {
+    width: 45px;
+  }
+}
